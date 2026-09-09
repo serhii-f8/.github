@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Serhii Fedorenko — Senior Full-Stack Engineer &amp; Tech Lead — CV</title>
+<style>
+  @font-face { font-family: "Plex Serif"; src: url("fonts/ibm-plex-serif-latin-400-normal.woff2") format("woff2"); font-weight: 400; font-display: block; }
+  @font-face { font-family: "Plex Serif"; src: url("fonts/ibm-plex-serif-latin-600-normal.woff2") format("woff2"); font-weight: 600; font-display: block; }
+  @font-face { font-family: "Plex Sans"; src: url("fonts/ibm-plex-sans-latin-400-normal.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: block; }
+  @font-face { font-family: "Plex Sans"; src: url("fonts/ibm-plex-sans-latin-400-italic.woff2") format("woff2"); font-weight: 400; font-style: italic; font-display: block; }
+  @font-face { font-family: "Plex Sans"; src: url("fonts/ibm-plex-sans-latin-600-normal.woff2") format("woff2"); font-weight: 600; font-style: normal; font-display: block; }
+  @font-face { font-family: "Plex Mono"; src: url("fonts/ibm-plex-mono-latin-500-normal.woff2") format("woff2"); font-weight: 500; font-display: block; }
+
+  :root {
+    --ink:    #14261e;
+    --muted:  #4d5a52;
+    --rule:   #d2d7cd;
+    --signal: #8a5a14;
+    --rail:   104pt;
+    --gap:    16pt;
+  }
+
+  @page { size: A4; margin: 15mm 16mm 14mm; }
+  * { box-sizing: border-box; }
+  html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body {
+    margin: 0; color: var(--ink);
+    font-family: "Plex Sans", system-ui, sans-serif;
+    font-size: 9pt; line-height: 1.5;
+    font-variant-numeric: tabular-nums;
+  }
+  a { color: var(--signal); text-decoration: none; }
+
+  /* ── masthead ─────────────────────────────────────────── */
+  .masthead { display: flex; align-items: flex-end; justify-content: space-between; gap: 24pt; }
+  .name {
+    font-family: "Plex Serif", Georgia, serif; font-weight: 600;
+    font-size: 29pt; line-height: 1; letter-spacing: -0.5pt; margin: 0;
+  }
+  .discipline { font-size: 10.4pt; margin-top: 5pt; max-width: 300pt; }
+  .whereabouts { text-align: right; font-size: 8.2pt; line-height: 1.75; color: var(--muted); white-space: nowrap; }
+  .whereabouts a { color: var(--ink); }
+  .keel { height: 2.5pt; background: var(--ink); margin: 9pt 0 0; }
+
+  /* ── section grid: label rail + substance ─────────────── */
+  section { display: grid; grid-template-columns: var(--rail) 1fr; gap: var(--gap);
+            padding: 9pt 0 0; border-top: 0.6pt solid var(--rule); margin-top: 9pt; }
+  section:first-of-type { border-top: 0; }
+  .rail { font-family: "Plex Serif", Georgia, serif; font-weight: 600; font-size: 10pt;
+          line-height: 1.25; color: var(--ink); }
+  .rail .note { display: block; font-family: "Plex Sans", sans-serif; font-weight: 400;
+                font-size: 7.4pt; color: var(--muted); margin-top: 2.5pt; line-height: 1.4; }
+  .body > p { margin: 0 0 5pt; max-width: 78ch; }
+  .body > p:last-child { margin-bottom: 0; }
+
+  /* ── the spec list: the one loud thing ────────────────── */
+  .spec { display: grid; grid-template-columns: 62pt 1fr; column-gap: 12pt; row-gap: 5.5pt; }
+  .spec dt {
+    font-family: "Plex Mono", monospace; font-weight: 500; font-size: 10.5pt;
+    color: var(--signal); text-align: right; line-height: 1.25; letter-spacing: -0.3pt;
+  }
+  .spec dd { margin: 0; line-height: 1.42; }
+  .spec dd b { font-weight: 600; }
+  .spec dd span { color: var(--muted); }
+
+  /* ── records: jobs and projects ───────────────────────── */
+  .record { break-inside: avoid; margin-bottom: 8pt; }
+  .record:last-child { margin-bottom: 0; }
+  .record-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12pt; }
+  .record-head h3 { font-size: 9.8pt; font-weight: 600; margin: 0; }
+  .record-head h3 em { font-style: italic; font-weight: 400; color: var(--muted); }
+  .when { font-family: "Plex Mono", monospace; font-size: 7.8pt; color: var(--muted); white-space: nowrap; }
+  .record p { margin: 2pt 0 0; color: var(--muted); max-width: 78ch; }
+  .parts { margin-top: 3pt; font-family: "Plex Mono", monospace; font-size: 7.3pt;
+           line-height: 1.55; color: var(--muted); }
+
+  .project h3 { font-family: "Plex Serif", Georgia, serif; font-size: 10.4pt; }
+  .project h3 a { color: var(--ink); }
+  .project .who { font-family: "Plex Sans", sans-serif; font-size: 8pt; white-space: nowrap;
+                  font-weight: 400; color: var(--muted); }
+
+  /* ── skills ───────────────────────────────────────────── */
+  .kit { display: grid; grid-template-columns: 84pt 1fr; column-gap: 12pt; row-gap: 3.5pt; }
+  .kit dt { font-weight: 600; font-size: 8.4pt; }
+  .kit dd { margin: 0; font-size: 8.4pt; color: var(--muted); }
+
+  .body ul { margin: 0; padding-left: 11pt; }
+  .body li { margin-bottom: 2.5pt; color: var(--muted); max-width: 76ch; }
+  .body li:last-child { margin-bottom: 0; }
+  .body li b { color: var(--ink); font-weight: 600; }
+
+  .credential .valid { font-size: 8.2pt; color: var(--muted); margin-top: 1.5pt; }
+
+  .colophon { margin-top: 11pt; padding-top: 6pt; border-top: 0.6pt solid var(--rule);
+              font-size: 7.4pt; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="masthead">
+    <div>
+      <h1 class="name">Serhii Fedorenko</h1>
+      <div class="discipline">Senior full-stack engineer and tech lead. Web platforms that stay fast as they grow.</div>
+    </div>
+    <div class="whereabouts">
+      <a href="mailto:drserhii@gmail.com">drserhii@gmail.com</a><br>
+      <a href="https://www.linkedin.com/in/serhii-fedorenko">linkedin.com/in/serhii-fedorenko</a><br>
+      <a href="https://github.com/serhii-f8">github.com/serhii-f8</a><br>
+      Remote, based in Poland (CET)
+    </div>
+  </div>
+  <div class="keel"></div>
+</header>
+
+<section>
+  <div class="rail">Profile</div>
+  <div class="body">
+    <p>Full-stack engineer with more than ten years building reliable, scalable web applications across
+    e-commerce, mobility, SaaS and marketing technology. Equally deep in two backend stacks, Laravel and
+    Node.js, paired with Vue or React, and with Filament, Nova or Backpack for admin work.</p>
+    <p>Most of my architecture work comes down to domain-driven design and CQRS: drawing the boundaries in a
+    tangled monolith so it can be scaled, observed and changed one piece at a time. When a workload outgrows
+    PHP or Node I move that specific path to Go or Rust and leave the rest alone. When a product needs to
+    leave the browser, I ship it in React Native or Flutter on the same API.</p>
+    <p>Alongside the code I lead teams: setting the architecture, keeping it intact through code review,
+    mentoring developers into owning a domain, and turning loose requirements into specifications a team can
+    build from.</p>
+  </div>
+</section>
+
+<section>
+  <div class="rail">Measured results<span class="note">Client engagements; figures as measured at the time</span></div>
+  <dl class="spec body">
+    <dt>55%</dt><dd><b>faster queries, 20% lower peak-hour load.</b> <span>Split a large domain into CQRS microservices with dedicated read models.</span></dd>
+    <dt>&lt;500ms</dt><dd><b>page loads, down from roughly three seconds.</b> <span>Profiled the real request path, removed N+1 queries, added the missing indexes, cached at the layer that mattered.</span></dd>
+    <dt>4&times;</dt><dd><b>peak traffic on the same infrastructure.</b> <span>Slow work moved to queues, read models and horizontal scaling added, Octane and Swoole on the hot path.</span></dd>
+    <dt>40%</dt><dd><b>lower cloud spend.</b> <span>Right-sized instances, repaired cache hit rates, compiled services on the hottest paths.</span></dd>
+    <dt>&lt;100ms</dt><dd><b>catalogue search.</b> <span>Elasticsearch with tuned relevance, faceting and incremental indexing.</span></dd>
+    <dt>10%+</dt><dd><b>higher checkout completion.</b> <span>Instrumented the funnel, cut steps and round-trips, fixed mobile performance and error handling.</span></dd>
+    <dt>90%</dt><dd><b>fewer failed background jobs.</b> <span>Idempotent handlers, retries with backoff, dead-letter queues, alerting on queue health.</span></dd>
+    <dt>50%</dt><dd><b>less development time.</b> <span>Domain-driven design and shared patterns, so new features build on existing components instead of re-implementing them.</span></dd>
+    <dt>40%</dt><dd><b>less tracked technical debt.</b> <span>Coding standards and review rules adopted across teams, with the debt backlog burned down on a schedule.</span></dd>
+    <dt>70%</dt><dd><b>faster deployments.</b> <span>CI/CD pipeline optimisation, zero-downtime releases, fast rollback.</span></dd>
+    <dt>70%</dt><dd><b>faster project setup.</b> <span>Project templates and Docker environments that give a new codebase CI, linting and deploys on day one.</span></dd>
+    <dt>45%</dt><dd><b>better UX metrics.</b> <span>Image recognition, speech and document parsing built in with Cloud Vision, Amazon Rekognition and Polly, IBM Watson and OpenAI.</span></dd>
+    <dt>20h</dt><dd><b>of manual work removed each week.</b> <span>Filament, Nova and Backpack panels built around the real workflow, with automation behind them.</span></dd>
+    <dt>minutes</dt><dd><b>to root cause, where it used to take hours.</b> <span>Structured logs, metrics and traces from day one, with alerts tuned so each one is worth acting on.</span></dd>
+  </dl>
+</section>
+
+<section>
+  <div class="rail">Experience</div>
+  <div class="body">
+    <div class="record">
+      <div class="record-head"><h3>Full-stack developer <em>Software development agency</em></h3><span class="when">Nov 2021 — present</span></div>
+      <p>Web applications and e-commerce platforms in Magento 2, PrestaShop and Laravel. Planned solution
+      architecture, estimates and delivery timelines; set architectural standards and reviewed code across projects.</p>
+    </div>
+    <div class="record">
+      <div class="record-head"><h3>Full-stack developer <em>IT services company</em></h3><span class="when">Jun 2018 — Nov 2021</span></div>
+      <p>Built and maintained more than ten web applications for clients in different countries and business
+      domains, choosing the stack for each. Led performance work, integrations and technical decisions on
+      long-running products.</p>
+    </div>
+    <div class="record">
+      <div class="record-head"><h3>Back-end developer <em>Web development studio</em></h3><span class="when">Aug 2017 — Jun 2018</span></div>
+      <p>Delivered PrestaShop and WordPress sites end to end: custom themes, plugins and modules, payment and
+      shipping integrations, and SEO work.</p>
+    </div>
+    <div class="record">
+      <div class="record-head"><h3>PHP developer <em>Freelance</em></h3><span class="when">Sep 2015 — Aug 2017</span></div>
+      <p>Built and supported WordPress and Yii2 sites from start to finish for international clients, including
+      custom themes and modules.</p>
+    </div>
+    <div class="record">
+      <div class="record-head"><h3>Founder <em>Own web products, SEO and lead generation</em></h3><span class="when">Sep 2011 — Aug 2017</span></div>
+      <p>Launched and grew a portfolio of sites and web services from concept to monetisation, on custom PHP
+      and CMS platforms.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="rail">Projects<span class="note">Client names withheld under NDA</span></div>
+  <div class="body">
+    <div class="record project">
+      <div class="record-head"><h3>Enterprise mobility and ride-hailing platform</h3><span class="who">team of 9</span></div>
+      <p>Designed the solution architecture and kept it intact through code review and technical guidance.
+      Implemented CQRS microservices, real-time communication over WebRTC and WebSockets, and AI document
+      recognition for driver onboarding. Led the development team and owned specifications, estimation and
+      technical risk.</p>
+      <div class="parts">Laravel Nova, Vue 3, Node.js, NestJS, Octane, WebRTC, WebSockets, CQRS microservices, RabbitMQ, PostgreSQL, Redis, AWS, Docker</div>
+    </div>
+    <div class="record project">
+      <div class="record-head"><h3>Custom form builder and print fulfilment platform</h3><span class="who">team of 7</span></div>
+      <p>Architected a drag-and-drop form builder with a conditional logic engine for product personalisation,
+      and a Canvas-based PDF template system with real-time preview. Built semi-automated order processing for
+      print file distribution, plus hybrid mobile and PWA apps on web components.</p>
+      <div class="parts">PrestaShop, TypeScript, Web Components (Lit), PWA, Canvas, jQuery, MySQL, AWS, Docker</div>
+    </div>
+    <div class="record project">
+      <div class="record-head"><h3>High-volume e-commerce and marketplace platform</h3><span class="who">team of 3</span></div>
+      <p>Built computer-vision document and recipe recognition into the storefront, custom shipping and
+      accounting integrations, subscription services, a PDF generation system and multi-carrier re-shipment
+      flows. Optimised checkout and implemented custom cart pricing rules.</p>
+      <div class="parts">Magento 2, Knockout.js, Elasticsearch, MySQL, Redis, AWS, Docker</div>
+    </div>
+    <div class="record project">
+      <div class="record-head"><h3>Agency CRM, HRM and SEO audit platform</h3><span class="who">team of 4</span></div>
+      <p>Delivered a combined CRM and HRM system with time-tracking integration, and a B2B platform running
+      automated SEO audits against third-party backlink and authority APIs. Engineered the data collection
+      pipeline on Google Cloud SQL and BigQuery, and led performance optimisation.</p>
+      <div class="parts">Laravel Nova, Laravel Horizon, Vue 2 (Nuxt.js), MySQL, BigQuery, AWS, Docker</div>
+    </div>
+    <div class="record project">
+      <div class="record-head"><h3>E-commerce platform migration</h3><span class="who">team of 3</span></div>
+      <p>Led research, estimation and delivery planning for a theme migration onto a modern Node.js and Stencil
+      toolchain, which unlocked the GraphQL API. Modernised the API integration, added editable theme sections
+      and premium product filtering, and raised the store's conversion rate.</p>
+      <div class="parts">BigCommerce, Stencil CLI, Node.js, GraphQL</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="rail">Open source</div>
+  <div class="body">
+    <div class="record project">
+      <div class="record-head"><h3><a href="https://github.com/serhii-f8/filament-studio">filament-studio</a></h3><span class="who"><a href="https://github.com/serhii-f8/filament-studio">serhii-f8/filament-studio</a></span></div>
+      <p>Dynamic data model manager for Filament. Build and evolve data models at runtime, without migrations:
+      EAV storage, 33 field types, dashboards and multi-tenancy in a single Laravel plugin.</p>
+      <div class="parts">Laravel, Filament, PHP, EAV, multi-tenancy, Blade, TypeScript</div>
+    </div>
+    <div class="record project">
+      <div class="record-head"><h3><a href="https://github.com/serhii-f8/vadd">vadd</a></h3><span class="who"><a href="https://github.com/serhii-f8/vadd">serhii-f8/vadd</a></span></div>
+      <p>Verification-driven development for coding agents. A local dashboard that turns agent output into
+      structured decisions and evidence, isolates every objective in its own git worktree, and refuses to mark
+      work finished until the verification commands have run green. That rule lives in the state machine, so
+      the interface cannot bypass it. No telemetry, no outbound requests.</p>
+      <div class="parts">TypeScript, Node.js, pnpm monorepo, schema-validated events, state machines, Vitest</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="rail">Toolkit</div>
+  <dl class="kit body">
+    <dt>PHP</dt><dd>Laravel, Symfony, Filament, Laravel Nova, Backpack, Horizon, Octane</dd>
+    <dt>Node</dt><dd>Node.js, TypeScript, NestJS, Express, Fastify, Prisma, pnpm workspaces, Nx</dd>
+    <dt>Hot paths</dt><dd>Go, Rust, gRPC, Swoole, FrankenPHP, async workers, task queues</dd>
+    <dt>Frontend</dt><dd>Vue.js, Nuxt, React, Next.js, Alpine.js, Tailwind CSS, web components</dd>
+    <dt>Mobile</dt><dd>React Native, Flutter, Dart, Expo, PWA</dd>
+    <dt>Commerce</dt><dd>Magento 2 / Adobe Commerce, PrestaShop, Shopify, BigCommerce</dd>
+    <dt>Data</dt><dd>MySQL, PostgreSQL, MongoDB, Redis, Elasticsearch, GraphQL, REST, RabbitMQ</dd>
+    <dt>Real time</dt><dd>WebSockets, WebRTC</dd>
+    <dt>Architecture</dt><dd>Domain-driven design, CQRS, microservices, event-driven systems, caching, load balancing</dd>
+    <dt>Delivery</dt><dd>Docker, Kubernetes, Ansible, AWS, GitHub Actions, GitLab CI/CD, observability, zero-downtime deploys</dd>
+  </dl>
+</section>
+
+<section>
+  <div class="rail">Leading and mentoring</div>
+  <div class="body">
+    <ul>
+      <li><b>Technical direction.</b> Designed solution architectures against business goals, then kept them intact through regular code review and hands-on guidance.</li>
+      <li><b>Team leadership.</b> Led development teams, owned planning, estimation and technical risk, and evaluated new technologies before the team adopted them.</li>
+      <li><b>Mentoring.</b> Pairing, structured code review, and handing engineers ownership of a domain rather than a ticket queue.</li>
+      <li><b>Standards.</b> Established coding standards and review rules across teams, and kept them enforced after the initial push.</li>
+      <li><b>Specification.</b> Technical specifications, diagrams and blueprints detailed enough for a team to build from without a round of clarifying meetings.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="rail">Credential</div>
+  <div class="body">
+    <div class="credential">
+      <b>Adobe Certified Professional, Adobe Commerce Developer</b>
+      <div class="valid">Issued by Adobe, valid until June 2028.
+        <a href="https://certification.adobe.com/credential/verify/e02ad242-8a61-11f0-8ca0-42010a400fd3">Verify the credential</a></div>
+    </div>
+    <p class="colophon">Client engagements were delivered under non-disclosure agreements. Employer and client
+    names are withheld here and available on request.</p>
+  </div>
+</section>
+
+</body>
+</html>
