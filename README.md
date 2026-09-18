@@ -12,7 +12,7 @@
 <p>
   <a href="https://www.linkedin.com/in/serhii-fedorenko"><img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-serhii--fedorenko-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"></a>
   <a href="mailto:drserhii@gmail.com"><img alt="Email" src="https://img.shields.io/badge/Email-drserhii%40gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white"></a>
-  <a href="https://github.com/serhii-f8/.github/raw/main/cv/serhii-fedorenko-cv.pdf"><img alt="Download CV (PDF)" src="https://img.shields.io/badge/⬇%20Download%20CV-PDF-2D3748?style=for-the-badge&logo=adobeacrobatreader&logoColor=white"></a>
+  <a href="https://serhii-f8.github.io/cv/serhii-fedorenko-cv.pdf"><img alt="Download CV (PDF)" src="https://img.shields.io/badge/⬇%20Download%20CV-PDF-2D3748?style=for-the-badge&logo=adobeacrobatreader&logoColor=white"></a>
 </p>
 
 <p>
@@ -257,7 +257,7 @@ Have a platform to build, a system to speed up or a monolith to untangle? Email 
 <p>
   <a href="mailto:drserhii@gmail.com"><img alt="Email" src="https://img.shields.io/badge/📬%20Email-drserhii%40gmail.com-2D3748?style=for-the-badge"></a>
   <a href="https://www.linkedin.com/in/serhii-fedorenko"><img alt="LinkedIn" src="https://img.shields.io/badge/💬%20Connect-LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"></a>
-  <a href="https://github.com/serhii-f8/.github/raw/main/cv/serhii-fedorenko-cv.pdf"><img alt="Download CV (PDF)" src="https://img.shields.io/badge/⬇%20CV-PDF-2D3748?style=for-the-badge&logo=adobeacrobatreader&logoColor=white"></a>
+  <a href="https://serhii-f8.github.io/cv/serhii-fedorenko-cv.pdf"><img alt="Download CV (PDF)" src="https://img.shields.io/badge/⬇%20CV-PDF-2D3748?style=for-the-badge&logo=adobeacrobatreader&logoColor=white"></a>
 </p>
 
 <sub>

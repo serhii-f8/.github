@@ -15,7 +15,7 @@ point back here, so they work from either location.
 | `README.md` | The profile README. Copy it to the root of `serhii-f8/serhii-f8` to render it on the account page. |
 | `cv/cv.html` | Source for the CV. Edit this, never the PDF. |
 | `cv/build.sh` | Regenerates the PDF from the HTML with headless Chrome. |
-| `cv/serhii-fedorenko-cv.pdf` | The generated CV, linked from the profile's download buttons. |
+| `cv/serhii-fedorenko-cv.pdf` | The generated CV. The profile's download buttons link to the copy on the personal site. |
 | `cv/fonts/` | IBM Plex woff2 faces, vendored so the build needs no network. Licensed under the SIL OFL, see `fonts/LICENSE.txt`. |
 
 ## Updating the profile
@@ -33,9 +33,11 @@ Edit `cv/cv.html`, then run:
 ./cv/build.sh
 ```
 
-Commit the regenerated PDF together with the HTML. The download buttons in the profile point at
-`https://github.com/serhii-f8/.github/raw/main/cv/serhii-fedorenko-cv.pdf`, so the path and filename must
-stay stable. The CV is designed to fit on three A4 pages; check the page count after any content change.
+Commit the regenerated PDF together with the HTML, then copy it to `cv/serhii-fedorenko-cv.pdf` in the
+`serhii-f8/serhii-f8.github.io` repository and push there too. The download buttons in the profile point at
+`https://serhii-f8.github.io/cv/serhii-fedorenko-cv.pdf`, which is served from that site repository, so the
+path and filename must stay stable in both places. The CV is designed to fit on three A4 pages; check the
+page count after any content change.
 
 The CV has its own visual identity: IBM Plex in three roles (Serif for the name and section rail, Sans for
 body text, Mono for measured figures only), pine ink on warm bone, and antique ochre reserved strictly for
